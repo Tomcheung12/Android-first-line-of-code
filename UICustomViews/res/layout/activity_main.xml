@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.uicustomviews.MainActivity" >
+
+    <!-- 加载布局文件 -->
+    <!-- <include layout="@layout/title"/> -->
+    
+    <!-- 添加自定义控件 -->
+    <com.example.uicustomviews.TitleLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ></com.example.uicustomviews.TitleLayout>
+    
+    <!-- 默认输入的光标在第一行,最大行数为50行 -->
+    <EditText 
+        android:id="@+id/edittext"
+        android:gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:maxLines="50"
+        android:hint="This is EditText"
+        android:enabled="false"
+        />
+
+</LinearLayout>

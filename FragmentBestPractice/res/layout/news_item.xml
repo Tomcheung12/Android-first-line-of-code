@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 用于作为新闻列表中子项的布局,就是新闻标题的布局 -->
+
+
+    <!--
+在TextView 和 EditText中，可以使用ellipsize来设置文字溢出隐藏，如：“一段很长的文本...”
+    用法如下：
+在xml中
+Android:ellipsize = "end"　　 省略号在结尾
+android:ellipsize = "start" 　　省略号在开头
+android:ellipsize = "middle" 省略号在中间
+android:ellipsize = "marquee" 跑马灯
+最好加一个约束android:singleline = "true" 或者 android:maxLines="1" -->
+
+<!-- paddingBottom补上空白,在其底部 -->
+    <TextView
+        android:id="@+id/news_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:paddingBottom="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp"
+        android:textSize="18sp" />
+
+</LinearLayout>

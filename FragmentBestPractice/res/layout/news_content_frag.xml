@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 新闻内容部分(碎片中使用的) -->
+
+    <!-- 主要分为2部分,头部显示完整的新闻标题,正文部分显示新闻内容,中间是一根细线. -->
+    <!-- 这里的细线是利用ImageView显示一张很窄的图片来实现的,将ImageView的android:scaleType属性设置
+    为fitXY,表示让这张图片填充满整个控件 -->
+    <LinearLayout
+        android:id="@+id/visibility_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible" >
+        <TextView 
+            android:id="@+id/news_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textSize="20sp"
+            />
+        <ImageView 
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/spilt_line"
+            />
+        <TextView 
+            android:id="@+id/news_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="15dp"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+    
+    <!-- 左侧的标题与右侧的新闻内容分界线 -->
+    <ImageView 
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/spilt_line_vertical"
+        />
+
+</RelativeLayout>
